@@ -1,9 +1,13 @@
 # APRENDIZADO #
 
-This file is created for my learning in another projects
-There ir here many commands to use with Cypress and best practices.
-Therefore, I will can doing refactory of the project for to use custom.commands in all the Test Cases in this project
-This project inicial with Walmyr Filho in the course Cypress, from Zero to the Cloud
+This file is created for my learning in another projects.
+
+There is here many commands to use with Cypress and best practices.
+
+Therefore, I will can doing refactory of the project for to use custom.commands
+in all the Test Cases in this project.
+
+This inicial project with Walmyr Filho in the course Cypress, from Zero to the Cloud
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -180,6 +184,10 @@ Readme with comands to use im my project
 
 ### Update project
 There is a new file TAT-CSC-refactory.cy.js for refactory and to use custom.commands 
+
+### Continuos Integration -CI Github Actions
+
+
 
 
 
