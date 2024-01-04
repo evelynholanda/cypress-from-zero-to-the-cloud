@@ -156,6 +156,10 @@ ideo: true,
 
 
 ### Project Documentation
+Readme with comands to use im my project
+
+### Update project
+There is a new file TAT-CSC-refactory.cy.js for refactory and to use custom.commands 
 
 
 
