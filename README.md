@@ -1,9 +1,18 @@
 # APRENDIZADO #
 
-### hoocks - BEFOREEACH() AND VISIT()
+This file is created for my learning in another projects
+There ir here many commands to use with Cypress and best practices.
+Therefore, I will can doing refactory of the project for to use custom.commands in all the Test Cases in this project
+This project inicial with Walmyr Filho in the course Cypress, from Zero to the Cloud
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+### hoocks - BEFOREACH() AND VISIT()
 beforeEach()
 
-Example
+Example:
+
 beforeEach(() => {
     cy.visit('./src/index.html')
   })
@@ -44,7 +53,8 @@ cy.get('#firstName').type('Ana')
   cy.get('#firstName').type('Ana')
 
 ### Custom Commands with data variable
-Example
+Example:
+
 const data = {
       firstName:'Ana',
       lastName:'Maria',
@@ -56,18 +66,20 @@ const data = {
     cy.fillMandatoryWithVariable(data)
 
 ### Select - CHECKBOX
-Example
+Example:
  cy.get('#product')
       .select('YouTube')
       .should('have.value', 'youtube')
 
 ### Select - RADIO BUTTON
+Example:
 cy.get('input[type="radio"][value="feedback"]').check()
      .should('have.value', 'feedback')
      .should('be.checked')
 
 
 ### Select - ALL RADIO BUTTON 
+Example:
 cy.get('#support-type')
       .find('input[type="radio"]')
       .each(typeOfService => {
@@ -77,6 +89,7 @@ cy.get('#support-type')
 
 
 ### Checking (and unchecking) inputs of type checkbox
+Example:
 cy.get('input[type="checkbox"]')
       .check()
       .should('be.checked')
@@ -85,6 +98,7 @@ cy.get('input[type="checkbox"]')
       .should('not.be.checked')
 
 ### Uploading files with Cypress
+Example:
 
       cy.get('input[type="file"]')
         .selectFile('cypress/fixtures/example.json')
@@ -94,6 +108,7 @@ cy.get('input[type="checkbox"]')
       
 
 ### Other Uploading files simulating drag-drop
+Example:
 cy.get('input[type="file"]')
         .selectFile('cypress/fixtures/example.json', { action: 'drag-drop'})
         .should(input => {
@@ -101,7 +116,7 @@ cy.get('input[type="file"]')
         })
 
 ### ALIAS
-
+Example:
 cy.fixture('example.json').as('sampleFile')
     cy.get('input[type="file"]')
       .selectFile('@sampleFile')
@@ -110,7 +125,7 @@ cy.fixture('example.json').as('sampleFile')
      })
 
 ### Handling links that open in another browser tab 
-
+Example:
 it.only('Verify the privacy policy', () => {
     cy.contains('Privacy Policy')
     .should('have.attr', 'href', 'privacy.html')
@@ -119,6 +134,8 @@ it.only('Verify the privacy policy', () => {
   })
 
 ### INVOKE - Handling links that open in another browser tab - - remove attribute
+Example:
+
 Another option 
  cy.contains('a', 'Privacy Policy')
     .invoke('removeAttr', 'target')
@@ -128,6 +145,7 @@ Another option
       .should('be.visible')
 
 ### Validates the independet privacy policy page
+Example:
 cy.visit('./src/privacy.html')
 
     cy.contains('h1', 'Privacy Policy')
@@ -141,6 +159,8 @@ OBS NPM SCRIPTS
 Caso alguém tenha habilitado o npm auto detect e mesmo assim não apareceu, é só "recolher" (ou minimizar) todas as opções do explorer (open editors, outline, timeline) e clicar com o botão direito do mouse no painel do explorer. Deve aparecer uma dialog onde você pode selecionar o npm pra aparecer :)
 
 ### SIMULATING THE DIMENSIONS DEVICE
+Example:
+
 First tópic
 Add in the file package.json,  this:
 Mode view
